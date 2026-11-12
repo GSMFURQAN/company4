@@ -9,7 +9,7 @@ const getAllTasks = async (req, res) => {
       count: tasks.length,
       data: tasks,
     }); 
-
+  
   } catch (error) {
     console.error('Error fetching tasks:', error);
     res.status(500).json({
