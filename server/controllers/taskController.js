@@ -6,7 +6,7 @@ const getAllTasks = async (req, res) => {
     const tasks = await Task.find().sort({ createdAt: -1 });
     res.status(200).json({
       success: true,
-      count: tasks.length,
+      count: tasks.length, 
       data: tasks,
     }); 
   
