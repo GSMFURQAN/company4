@@ -1,11 +1,9 @@
-name : build-and-lint
-
+name: build-and-lint
 on:
-  push:
-  branches: [master,dev]
-  pull_request:
-  branch:[main,dev]
-
+push:
+branches: [main, dev]
+pull_request:
+branches: [main, dev]
 jobs:
 build-and-lint:
 runs-on: ubuntu-latest
