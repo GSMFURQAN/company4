@@ -1,15 +1,13 @@
 const Task = require('../models/Task');
-const all = ''
 // Get all tasks
 const getAllTasks = async (req, res) => {
   try {
     const tasks = await Task.find().sort({ createdAt: -1 });
     res.status(200).json({
       success: true,
-      count: tasks.length, 
+      count: tasks.length,
       data: tasks,
-    }); 
-  
+    });
   } catch (error) {
     console.error('Error fetching tasks:', error);
     res.status(500).json({
